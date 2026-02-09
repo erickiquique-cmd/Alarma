@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Temporizador de 30 Minutos</title>
+    <title>alarma</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -83,5 +83,10 @@
         }
     }
 
-    boton.addEventListener('click', () => {
-        boton.disabled = true
+        boton.addEventListener('click', () => {
+            boton.disabled = true;
+            estado.textContent = "Cuenta regresiva en progreso...";
+            estado.style.color = "#333";
+            intervalo = setInterval(actualizarTimer, 1000);
+        });
+    </script>
